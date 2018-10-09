@@ -19,7 +19,7 @@ print(sphere(r))
 print('\nЗадача № 3')
 
 def cube(a):
-	return 'The volume of the cube is equal to ' + str(a ** 3) + ' cm\u00b3'
+    return 'The volume of the cube is equal to ' + str(a ** 3) + ' cm\u00b3'
 a = float(input('Please, enter cube\'s rib: '))
 print(cube(a))
 
@@ -27,7 +27,7 @@ print(cube(a))
 print('\nЗадача № 4')
 
 def parallelepiped(a, b, c):
-	return 'The volume of the parallelepiped is equal to ' + str(a * b * c) + ' cm\u00b3'
+    return 'The volume of the parallelepiped is equal to ' + str(a * b * c) + ' cm\u00b3'
 a = float(input('Please, enter the length of the first parallelepiped\'s side: '))
 b = float(input('Please, enter the length of the second parallelepiped\'s side: '))
 c = float(input('Please, enter the length of the third parallelepiped\'s side: '))
@@ -37,7 +37,7 @@ print(parallelepiped(a, b, c))
 print('\nЗадача № 5')
 
 def cylinder(r, h):
-	return 'The volume of the parallelepiped is equal to ' + str(3.14 * r ** 2 * h) + ' cm\u00b3'
+    return 'The volume of the parallelepiped is equal to ' + str(3.14 * r ** 2 * h) + ' cm\u00b3'
 r = float(input('Please, enter the length of the cylinder\'s radius: '))
 h = float(input('Please, enter the length of the cylinder\'s height: '))
 print(cylinder(r, h))
