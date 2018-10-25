@@ -38,11 +38,11 @@ class CoffeeMachine:
 
     def make_coffee(self, used_coffee, used_sugar, used_milk):
         if self.coffee < used_coffee:
-            print(f'Пополните запаса кофе на {used_coffee - self.coffee} гр.')
+            print(f'Пополните запас кофе на {used_coffee - self.coffee} гр.')
         if self.sugar < used_sugar:
-            print(f'Пополните запаса сахара на {used_sugar - self.sugar} гр.')
+            print(f'Пополните запас сахара на {used_sugar - self.sugar} гр.')
         if self.milk < used_milk:
-           print(f'Пополните запаса молока на {used_milk - self.milk} мл.')
+           print(f'Пополните запас молока на {used_milk - self.milk} мл.')
         else:
             self.__subtract_coffee(used_coffee)
             self.__subtract_sugar(used_sugar)
