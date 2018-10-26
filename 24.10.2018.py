@@ -37,6 +37,8 @@ class CoffeeMachine:
             self.milk -= used_milk
 
     def make_coffee(self, used_coffee, used_sugar, used_milk):
+        if self.coffee < used_coffee or self.sugar < used_sugar or self.milk < used_milk:
+            print('Но для начала...')
         if self.coffee < used_coffee:
             print(f'Пополните запас кофе на {used_coffee - self.coffee} гр.')
         if self.sugar < used_sugar:
@@ -58,5 +60,5 @@ if __name__ == '__main__':
     except ValueError:
         print('Вводите только числа!')
     drink = CoffeeMachine(coffee, sugar, milk)
-    print('Кофемашина самостоятельно прогонит горячую воду под требуемым давлением, чтобы сделать для Вас чашечку бодрящего напитка. \nНо для начала...')
+    print('Кофемашина самостоятельно прогонит горячую воду под требуемым давлением, чтобы сделать для Вас чашечку бодрящего напитка.')
     print(drink.make_coffee(coffee, sugar, milk))
