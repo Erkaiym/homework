@@ -1,11 +1,11 @@
-<div class="card border-dark mb-4">
+<div class="card border-dark mb-4" style="width: 130%;">
   <div class="card-header">
     {{ post.date_pub }}
   </div>
   <div class="card-body">
     <h5 class="card-title">{{ post.title }}</h5>
     <p class="card-text">{{ post.body|truncatewords:15 }}</p>
-    <a href="{{ post.get_absolute_url }}" class="btn btn-outline-success">Read</a>
+    <a href="{{ post.get_absolute_url }}" class="btn btn-warning">Read</a>
   </div>
   <div class="card-footer text-muted">
     Tags:

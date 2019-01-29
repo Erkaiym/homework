@@ -6,7 +6,7 @@ Edit Post "{{ post.title }}" - {{ block.super }}
 
 
 {% block content %}
-<form class="" action="{{ post.get_update_url }}" method="post">
+<form class="form" action="{{ post.get_update_url }}" method="post">
   {% csrf_token %}
 
   {% for field in form %}
@@ -20,7 +20,7 @@ Edit Post "{{ post.title }}" - {{ block.super }}
       {{ field }}
     </div>
   {% endfor %}
-  <button class="btn btn-primary" type="submit" name="button">Update post</button>
+  <button class="btn btn-success" type="submit" name="button">Update post</button>
 
 </form>
 {% endblock %}

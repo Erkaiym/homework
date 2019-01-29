@@ -7,7 +7,7 @@
 
 {% block content %}
 
-  <form class="" action="{{ tag.tag_update_url }}" method="post">
+  <form class="form" action="{{ tag.get_update_url }}" method="post">
     {% csrf_token %}
 
     {% for field in form %}
@@ -23,7 +23,7 @@
       </div>
     {% endfor %}
 
-    <button class="btn btn-primary" type="submit">Update tag</button>
+    <button class="btn btn-success" type="submit">Update tag</button>
 
   </form>
 

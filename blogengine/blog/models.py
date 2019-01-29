@@ -28,13 +28,21 @@ class Post(models.Model):
         return reverse('post_update_url', kwargs={'slug':self.slug})
 
 
+    def get_delete_url(self):
+        return reverse('post_delete_url', kwargs={'slug':self.slug})
+
+
     def __str__(self):
         return self.title
 
     def save(self, *args, **kwargs):
         if not self.id:
             self.slug = gen_slug(self.title)
-            super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
+
+
+    class Meta:
+        ordering = ['-date_pub']
 
 
 class Tag(models.Model):
@@ -50,5 +58,13 @@ class Tag(models.Model):
         return reverse('tag_update_url', kwargs={'slug':self.slug})
 
 
+    def get_delete_url(self):
+        return reverse('tag_delete_url', kwargs={'slug':self.slug})
+
+
     def __str__(self):
         return self.title
+
+
+    class Meta:
+        ordering = ['title']
